@@ -1,2 +1,2 @@
-# nonlinear-dimensionality-reduction
-This project is a part of my master's thesis, under the supervision of Dr. Enjie GHORBEL and Pr. Faouzi GHORBEL (Data Science Master @ENSI).
+# Nonlinear dimensionality reduction
+This project is part of my master's thesis, under the supervision of Dr. Enjie GHORBEL and Pr. Faouzi GHORBEL (Data Science Master @ENSI).
