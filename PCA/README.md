@@ -13,39 +13,29 @@ To reduce the dimensionality of the data, PCA does not consider the axe where th
 **Step 1: Normalize the data**
 The first step is to center the data by calculating the mean $\mu$ of the data. Then, for each data point $X_i$, substract the mean $\mu$ to center the data around the origin as follows:
 
-$$
-X_{i}^{'} = X_{i} - \mu
-$$
+$X_{i}^{'} = X_{i} - \mu$
 
 You can also need to reduce the data if they have not the same scale. Thus, the first step becomes:
 
-$$
-X_{i}^{'} = \frac{X_{i} - \mu}{\sigma}
-$$
+$X_{i}^{'} = \frac{X_{i} - \mu}{\sigma}$
 where $\sigma$ is the standard deviation of the data.
 
 **Step 2: Compute the covariance matrix of the normalized data**
 The covariance matrix $C_{X}$ of the normalized data is computed as follows:
 
-$$
-C_{X} = \frac{1}{N} \sum_{i=1}^{N} X_{i}^{'}(X_{i}^{'})^{T}
-$$
+$C_{X} = \frac{1}{N} \sum_{i=1}^{N} X_{i}^{'}(X_{i}^{'})^{T}$
 where $N$ is the number of data points.
 
 **Step 3: Perform the eigenvector decomposition**
 The eigenvector decomposition of the covariance matrix $C_X$ is performed to obtain the principal components as follows:
 
-$$
-C_{X} = U \Lambda U^{T}
-$$
+$C_{X} = U \Lambda U^{T}$
 where $U$ contains the eigenvectors _(principal directions)_, and $ \Lambda $ is a diagonal matrix that contains the eigenvalues _(explained variance)_.
 
 **Step 4: Data projection**
 The last step consists of projecting the data $X_{i}^{'}$ onto the principal directions as follows:
 
-$$
-Y_{i} = U^{T}X_{i}^{'}
-$$
+$Y_{i} = U^{T}X_{i}^{'}$
 where $Y_{i}$ represents the data in the new reduced space.
 
 ## Experiments
