@@ -14,21 +14,21 @@ To reduce the dimensionality of the data, PCA does not consider the axe where th
 The first step is to center the data by calculating the mean $\mu$ of the data. Then, for each data point $X_i$, substract the mean $\mu$ to center the data around the origine as follows:
 
 $$
-X_i^' = X_i - \mu
+X_{i}^{'} = X_{i} - \mu
 $$
 
 You can also need to reduce the data if they have not the same scale. Thus, the first step become:
 
 $$
-X_i^' = (X_i - \mu)/\sigma
+X_{i}^{'} = (X_{i} - \mu)/\sigma
 $$
 where $\sigma$ is variance of the data.
 
 **Step 2: Compute the covariance matrix of the normalized data**
-The covariance matrix $C_X$ of the normalized data is computed as follows:
+The covariance matrix $C_{X}$ of the normalized data is computed as follows:
 
 $$
-C_X = \frac{1}{N} \sum_{i=1}^N X_i^'(X_i)^T
+C_{X} = \frac{1}{N} \sum_{i=1}^{N} X_{i}^{'}(X_i)^{T}
 $$
 where $N$ is the number of data points.
 
@@ -36,17 +36,17 @@ where $N$ is the number of data points.
 The eigenvector decomposition of the covariance matrix $C_X$ is perform to obtain the principal components as follows:
 
 $$
-C_X = USU^T
+C_{X} = USU^{T}
 $$
 where $U$ contains the eigenvectors _(principal directions)_, and $S$ is a diagonal matrix that contains the eigenvalues _(explained variance)_.
 
 **Step 4: Data projection**
-The last step consists of projecting the data $X_i^'$ onto the principal directions as follows:
+The last step consists of projecting the data $X_{i}^{'}$ onto the principal directions as follows:
 
 $$
-Y_i = V^TX_i^'
+Y_{i} = V^{T}X_{i}^{'}
 $$
-where $Y_i$ represents the data in the new reduced space.
+where $Y_{i}$ represents the data in the new reduced space.
 
 ## Experiments
 We implement PCA step by step in this directory, and compare the results with the PCA function from sklearn. The obtained results are the same!
