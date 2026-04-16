@@ -6,7 +6,7 @@ However, the well-known formulation was given by [Harold Hotteling](https://psyc
 PCA finds a new orthonormal basis that best re-expresses the data in a _d_-dimensional space, where _d_ is a linear combination of the _D_ original dimensions. The axis of that new basis need to be **orthonormal** to decorrelate the data. The main goal of that basis is to **maximize the variance** of the data along its axes, which are called **principal components**.
 
 ## Dimensionality reduction with PCA
-To reduce the dimensionality of the data, PCA does not consider the axe where the variability of the data is not significant.
+To reduce the dimensionality of the data, PCA does not consider the axis where the variability of the data is not significant.
 
 ## Steps for implementing PCA
 
@@ -28,7 +28,10 @@ where $\sigma$ is the standard deviation of the data.
 ### Step 2: Compute the covariance matrix of the normalized data
 The covariance matrix $C_{X}$ of the normalized data is computed as follows:
 
-$C_{X} = \frac{1}{N} \sum_{i=1}^{N} X_{i}^{'}(X_{i}^{'})^{T}$
+$$
+C_{X} = \frac{1}{N} \sum_{i=1}^{N} X_{i}^{'}(X_{i}^{'})^{T}
+$$
+
 where $N$ is the number of data points.
 
 ### Step 3: Perform the eigenvector decomposition
@@ -37,6 +40,7 @@ The eigenvector decomposition of the covariance matrix $C_X$ is performed to obt
 $$
 C_{X} = U \Lambda U^{T}
 $$
+
 where $U$ contains the eigenvectors _(principal directions)_, and $ \Lambda $ is a diagonal matrix that contains the eigenvalues _(explained variance)_.
 
 ### Step 4: Data projection
