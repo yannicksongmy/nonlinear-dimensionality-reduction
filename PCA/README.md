@@ -41,7 +41,7 @@ $$
 C_{X} = U \Lambda U^{T}
 $$
 
-where $U$ contains the eigenvectors _(principal directions)_, and $ \Lambda $ is a diagonal matrix that contains the eigenvalues _(explained variance)_.
+where $U$ contains the eigenvectors _(principal directions)_, and $\Lambda$ is a diagonal matrix that contains the eigenvalues _(explained variance)_.
 
 ### Step 4: Data projection
 The last step consists of projecting the data $X_{i}^{'}$ onto the principal directions as follows:
