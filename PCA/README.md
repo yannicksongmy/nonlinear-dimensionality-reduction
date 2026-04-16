@@ -3,7 +3,7 @@ PCA is a technique that is widely used for applications such as dimensionality r
 However, the well-known formulation was given by [Harold Hotteling](https://psycnet.apa.org/doiLanding?doi=10.1037%2Fh0070888) in 1933.
 
 ## The magic behind PCA
-PCA finds a new orthonormal basis that best re-expresses the data in a _d_-dimensional space, where _d_ is a linear combination of the _D_ original dimensions. The axis of that new basis need to be **orthonormal** to decorrelate the data. The main goal of that basis is to **maximize the variance** of the data along its axes, which are called **principal components**.
+PCA finds a new orthonormal basis that best re-expresses the data in a _d_-dimensional space, where _d_ is a linear combination of the _D_ original dimensions. The main goal of that basis is to **maximize the variance** of the data along its axes, which are called **principal components**.
 
 ## Dimensionality reduction with PCA
 To reduce the dimensionality of the data, PCA does not consider the axis where the variability of the data is not significant.
