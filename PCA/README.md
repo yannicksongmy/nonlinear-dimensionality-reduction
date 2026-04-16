@@ -49,6 +49,7 @@ The last step consists of projecting the data $X_{i}^{'}$ onto the principal dir
 $$
 Y_{i} = U^{T}X_{i}^{'}
 $$
+
 where $Y_{i}$ represents the data in the new reduced space.
 
 ## Experiments
